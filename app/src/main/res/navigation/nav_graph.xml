@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/transaksiFragment">
+
+    <fragment
+        android:id="@+id/transaksiFragment"
+        android:name="edu.unikom.suweorajamuhamid.ui.transaksi.TransaksiFragment"
+        android:label="Transaksi"
+        tools:layout="@layout/fragment_transaksi">
+        <action
+            android:id="@+id/action_transaksiFragment_to_transaksiFormFragment"
+            app:destination="@id/transaksiFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/barangFragment"
+        android:name="edu.unikom.suweorajamuhamid.ui.barang.BarangFragment"
+        android:label="Barang"
+        tools:layout="@layout/fragment_barang">
+        <action
+            android:id="@+id/action_barangFragment_to_barangFormFragment"
+            app:destination="@id/barangFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="edu.unikom.suweorajamuhamid.ui.info.InfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/barangFormFragment"
+        android:name="edu.unikom.suweorajamuhamid.ui.barang.BarangFormFragment"
+        android:label="Form Barang"
+        tools:layout="@layout/fragment_barang_form">
+        <argument
+            android:name="barangId"
+            app:argType="long"         android:defaultValue="-1L" /> </fragment>
+
+    <fragment
+        android:id="@+id/transaksiFormFragment"
+        android:name="edu.unikom.suweorajamuhamid.ui.transaksi.TransaksiFormFragment"
+        android:label="Form Transaksi"
+        tools:layout="@layout/fragment_transaksi_form">
+        <argument
+            android:name="transaksiId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+
+</navigation>
